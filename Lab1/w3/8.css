@@ -1,0 +1,16 @@
+a {
+    background-color: pink;
+    border: black 2px dashed;
+}
+p {
+    color: black;
+    text-align: left;
+    font-size: 80%;
+    border: black 1px solid;
+}
+h1 {
+    color: blueviolet;
+    text-align: center;
+    font-size: 18px;
+    border: black 2px solid;
+}
