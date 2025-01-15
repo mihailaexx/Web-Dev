@@ -7,10 +7,14 @@ p {
     text-align: left;
     font-size: 80%;
     border: black 1px solid;
+    padding-top: 50px;
+    margin-top: 50px;
 }
 h1 {
     color: blueviolet;
     text-align: center;
     font-size: 18px;
     border: black 2px solid;
+    padding: 30px; /* padding - space between text and border*/
+    margin: 30px; /* margin - space outside border*/
 }
