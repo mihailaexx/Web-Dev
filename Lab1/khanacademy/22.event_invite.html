@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Event invite</title>
+<!--    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">-->
+    <style>
+        body {
+            font-family: "Arial Black", serif;
+        }
+        .flex-container {
+            border: 1px solid black;
+            margin: 25%;
+            width: 50%;
+            display: flex;
+        }
+        .flex-item {
+            text-align: center;
+            color: red;
+        }
+        .column {
+            justify-content: center;
+            align-items: center;
+            flex-flow: column wrap;
+        }
+        .row {
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 0 15px;
+            border-radius: 5px;
+            cursor: crosshair;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <div class="flex-container column">
+        <h1 class="flex-item">You're invited!</h1>
+        <h3 class="flex-item">Party at 31.01.2025</h3>
+        <p class="flex-item">
+            Get ready to rock out! We invite you to a cool party at ???. There will be music, dancing, delicious
+            food and a lot of fun!
+        </p>
+        <button type="submit" class="flex-item button">Confirm your arrival by clicking the button</button>
+    </div>
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+</html>
