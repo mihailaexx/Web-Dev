@@ -14,7 +14,6 @@ div {
 .content0 {
     padding: 72px 0 112px;
     min-width: 500px;
-    border: 1px solid black;
     background-color: #f2f4f7;
 }
 .content1 {
@@ -22,7 +21,6 @@ div {
     padding: 20px 0;
     position: relative;
     width: 980px;
-    border: 1px solid black;
 }
 
 
@@ -31,11 +29,9 @@ div {
     vertical-align: top;
     padding-right: 32px;
     width: 548px;
-    /*border: 1px solid black;*/
 }
 div.logo {
     padding: 112px 0 16px;
-    /*border: 1px solid black;*/
 }
 img.logo {
     height: 106px;
@@ -48,7 +44,6 @@ img.logo {
     width: 500px;
     line-height: 32px;
     margin: 0;
-    /*border: 1px solid black;*/
 }
 
 
@@ -99,10 +94,10 @@ form {
     box-shadow: 0 0 0 2px #e7f3ff; /*glowing effect*/
     color: #46494d;
 }
-.login-button {
+.login {
     padding-top: 6px;
 }
-button.login-button {
+button.login {
     font-family: inherit;
     font-size: 20px;
     font-weight: bold;
@@ -118,12 +113,118 @@ button.login-button {
     color: #fff;
 
 }
-.reset-password-button {
-
+.forgot {
+    margin-top: 16px;
 }
-.divider {
-
+a.forgot, a.forgot:visited {
+    font-family: inherit;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0866ff;
 }
-.create-account-button {
+a.forgot:hover {
+    text-decoration: underline;
+}
+#line-divider1 {
+    margin: 24px 16px 0;
+    border-bottom: 1px solid #ccd0d5;
+}
+.create-account {
+    margin: 24px 0 0;
+}
+a.create-account {
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0 16px;
+    background-color: #42b72a;
+    border: none;
+    border-radius: 6px;
+    line-height: 48px;
+    width: 200px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+a.create-account:hover {
+    background-color: #33991f;
+}
+.create-business-account {
+    margin: 28px 0 0;
+    font-family: inherit;
+    font-size: 14px;
+    text-align: center;
+}
+a.create-business-account, a.create-business-account:visited {
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+a.create-business-account:hover {
+    text-decoration: underline;
+}
 
+
+.footer {
+    padding: 20px 0 0;
+}
+.footer-content {
+    width: 980px;
+    min-width: 500px;
+    margin: 0 auto;
+    font-family: inherit;
+    color: #737373;
+    font-size: 12px;
+    font-weight: lighter;
+}
+.footer-content-list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 8px 0;
+    margin: 0;
+}
+.footer-content-element, .footer-content-element:visited {
+    color: inherit;
+    text-decoration: none;
+}
+.footer-content-element:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer-content-element-not-first {
+    padding-left: 10px;
+}
+.footer-content-element-plus {
+    border: 1px solid #ccd0d5;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #8a8d91;
+    background-color: #ebedf0;
+    padding: 0 8px;
+}
+#line-divider2 {
+    margin: 0 0 8px;
+    border-bottom: 1px solid #ccd0d5;
+}
+.footer-content-list-mult-rows {
+    margin: 0 0 0 -20px;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    list-style-type: none;
+}
+.footer-content-element-mult-rows {
+    padding: 0 0 0 20px;
+}
+.meta {
+    padding: 20px 0;
+    font-size: 11px;
 }
