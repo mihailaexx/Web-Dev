@@ -13,7 +13,6 @@ div {
 
 .content0 {
     padding: 72px 0 112px;
-    min-width: 500px;
     background-color: #f2f4f7;
 }
 .content1 {
@@ -21,6 +20,7 @@ div {
     padding: 20px 0;
     position: relative;
     width: 980px;
+    min-width: 500px;
 }
 
 
