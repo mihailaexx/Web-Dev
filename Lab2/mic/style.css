@@ -34,11 +34,13 @@ ul {
 
 
 .head {
-    margin-bottom: 2px;
+    /*margin-bottom: 2px;*/
     justify-content: space-between;
     padding: 0 5%;
     color: #262626;
     height: 54px;
+    max-width: 1600px;
+    margin: 0 auto 2px;
 }
 .head-logo {
     width: 108px;
@@ -126,6 +128,7 @@ ul {
     padding: 16px 0;
     background-color: #0067b8;
     justify-content: center;
+    z-index: 5;
 }
 .alert-text {
     padding-right: 27px;
@@ -152,7 +155,6 @@ ul {
     width: 100%;
     z-index: 1;
     overflow: hidden;
-    height: 535px;
 }
 .image-card {
     position: absolute;
@@ -161,12 +163,13 @@ ul {
 }
 .image-card1 {
     flex-direction: column;
-    margin: 48px 0;
+    max-width: 1600px;
+    margin: 48px auto 0;
     padding: 0 5%;
 }
 .image-card2 {
     background-color: white;
-    width: 35%;
+    width: 35.3333%;
     padding: 48px 48px 40px;
     box-shadow: 0 .125rem .25rem 0 rgba(0, 0, 0, .13), 0 0 .0625rem 0 rgba(0, 0, 0, .11);
 }
