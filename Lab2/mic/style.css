@@ -1,6 +1,6 @@
 body {
     font-size: 13px;
-    background-color: #e6e6e6;
+    background-color: white;
     font-family: 'Segoe UI', SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000;
     margin: 0;
@@ -11,7 +11,6 @@ body {
 a, a:visited, button, button:visited {
     cursor: pointer;
     text-decoration: none;
-    color: #000;
 }
 .flex-container {
     display: flex;
@@ -52,9 +51,13 @@ ul {
     padding: 17px 12px 10px;
     border: 1px solid transparent;
     display: inline-block;
+    color: black;
 }
 .head-list-element:hover {
     text-decoration: underline 2px black;
+}
+.head-list-element:visited {
+    color: initial;
 }
 .head-list-element-all {
     padding: 17px 20px 16px 15px;
@@ -71,7 +74,6 @@ ul {
     font-family: "Segoe MDL2 Assets", "Segoe UI Symbol";
     content: "";
     display: inline-block;
-    position: relative;
     font-size: 8px;
     margin-left: 5px;
     font-weight: 700;
@@ -85,7 +87,6 @@ ul {
     font-family: "Segoe MDL2 Assets", "Segoe UI Symbol";
     content: "";
     display: inline-block;
-    position: relative;
     font-size: 16px;
     margin-left: 2px;
     text-indent: 0;
@@ -107,6 +108,10 @@ ul {
     display: flex;
     align-items: center;
     padding-top: 3px;
+    color: black;
+}
+.head-list-element-sign-in:visited {
+    color: initial;
 }
 .head-list-element-sign-in-label {
     padding: 0 4px 0 12px;
@@ -119,7 +124,6 @@ ul {
 
 .alert {
     padding: 16px 0;
-    /*min-height: 3.625rem;*/
     background-color: #0067b8;
     justify-content: center;
 }
@@ -128,4 +132,118 @@ ul {
     color: white;
     font-weight: 600;
     font-size: 1rem;
+}
+.alert-text:hover {
+    text-decoration: underline;
+}
+.alert-text:after {
+    content: "";
+    left: .4375em;
+    font-family: "Segoe MDL2 Assets", "Segoe UI Symbol";
+    position: relative;
+    top: 1px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+
+.image {
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    height: 535px;
+}
+.image-card {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.image-card1 {
+    flex-direction: column;
+    margin: 48px 0;
+    padding: 0 5%;
+}
+.image-card2 {
+    background-color: white;
+    width: 35%;
+    padding: 48px 48px 40px;
+    box-shadow: 0 .125rem .25rem 0 rgba(0, 0, 0, .13), 0 0 .0625rem 0 rgba(0, 0, 0, .11);
+}
+.image-card-header {
+    margin: 0 0 20px;
+    font-size: 2.3125rem;
+    font-weight: 600;
+    display: inline-block;
+}
+.image-card-paragraph {
+    margin: 0 0 24px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.image-card-link {
+    display: inline-block;
+    color: white;
+    padding: 10px 12px;
+    background-color: #0067b8;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+.carousel-controls {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 43px;
+}
+.carousel-controls-button {
+    border: none;
+    background-color: transparent;
+    padding: 1rem;
+    font-family: "Segoe Fluent Icons", "Segoe MDL2 Assets", "Segoe UI Symbol";
+}
+.carousel-controls-play {
+    font-size: 13px;
+}
+.carousel-controls-left {
+    font-size: 25px;
+    position: relative;
+    top: 1px;
+}
+.carousel-controls-active-element {
+    font-size: 10px;
+}
+.carousel-controls-element {
+    font-size: 10px;
+}
+.carousel-controls-right {
+    font-size: 25px;
+    position: relative;
+    top: 1px;
+}
+
+
+.link-list-container {
+    justify-content: center;
+}
+.link-list {
+    align-content: center;
+}
+.link-list-element {
+    margin: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.link-list-element-image {
+    margin-bottom: 8px;
+    width: 40px;
+}
+.link-list-element-text {
+    color: #0067b8;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 16px;
 }
