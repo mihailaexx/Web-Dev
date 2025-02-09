@@ -1,3 +1,3 @@
 if ("0") {
-    alert( 'Hello' );
+  alert( 'Hello' );
 } // won't be shown

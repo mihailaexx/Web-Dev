@@ -17,17 +17,17 @@ if (null || -1 && 1) alert( 'third' ); // yes
 let userName = prompt("Who's there?");
 
 if (userName === null) {
-    alert('Canceled');
+  alert('Canceled');
 } else if (userName === 'Admin') {
-    let password = prompt('Password?');
+  let password = prompt('Password?');
 
-    if (password === null) {
-        alert( 'Canceled' );
-    } else if (password == 'TheMaster') {
-        alert( 'Welcome!' );
-    } else {
-        alert( 'Wrong password' );
-    }
+  if (password === null) {
+    alert( 'Canceled' );
+  } else if (password == 'TheMaster') {
+    alert( 'Welcome!' );
+  } else {
+    alert( 'Wrong password' );
+  }
 } else {
-    alert( "I don't know you" );
+  alert( "I don't know you" );
 }
