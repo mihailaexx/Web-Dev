@@ -12,21 +12,14 @@
 </div>
 
 
-
-<div class="content flex-container">
+<div class="content">
     <div class="content1 flex-container">
         <h1>ToDo List</h1>
-        <form class="task-add flex-container">
-            <input type="text" name="task-add" id="task-add-input" aria-label="New Task">
-            <button type="submit" id="task-add-button"></button>
-        </form>
-        <ul>
-            <li>
-                <input type="checkbox" name="" id="">
-                <span>111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111</span>
-                <button></button>
-            </li>
-        </ul>
+        <div class="task-add flex-container">
+            <input id="task-add-input" placeholder="New Task" type="text">
+            <button id="task-add-button" onclick="addTask()">Add</button>
+        </div>
+        <ul id="task-list"></ul>
     </div>
 </div>
 
@@ -37,8 +30,7 @@
 </div>
 
 
-
-<script src=""></script>
+<script src="script.js"></script>
 
 </body>
 </html>

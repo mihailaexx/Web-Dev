@@ -6,6 +6,13 @@ body {
 .flex-container {
     display: flex;
 }
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+a, a:hover, button, button:hover {
+    cursor: pointer;
+}
 
 .header {
     padding: 0 5%;
@@ -15,20 +22,61 @@ body {
     margin: 14px 0;
     font-size: 24px;
 }
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
 
 
 .content {
-    margin: 0 10%;
-    justify-content: center;
-    height: 800px;
+    margin: 0 25%;
+    justify-content: normal;
 }
 .content1 {
     flex-direction: column;
 }
 .task-add {
-    justify-content: center;;
+    justify-content: space-evenly;
 }
 #task-add-input {
-    margin: 8px 12px;
-    width: 50%;
+    padding: 8px 12px;
+    width: 70%;
+    border-radius: 2px;
+}
+#task-add-button {
+    padding: 8px 12px;
+    border-radius: 2px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+#task-list {
+    border: 1px solid #232323;
+    border-radius: 5px;
+}
+.task-list-element {
+    padding: 8px 12px;
+    border-bottom: 1px solid #232323;
+}
+.task-list-element-checkbox {
+    width: 100px;
+    margin-right: 16px;
+    align-self: center;
+}
+.task-list-element-text {
+    min-width: 89.5%;
+    overflow: auto;
+    white-space: normal;
+    align-self: center;
+}
+.task-list-delete-button {
+    color: red;
+    font-size: 24px;
+    border: none;
+    background-color: initial;
+    align-self: center;
+}
+
+.footer {
+    position: fixed;
 }
