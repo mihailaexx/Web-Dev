@@ -7,4 +7,4 @@ function makeUser() {
 
 let user = makeUser(); // {name: "John", ref: *global this*}
 
-console.log( user.ref.name ); // undefined, bc global this doesn't have name
+console.log(user.ref.name); // undefined, bc global this doesn't have name

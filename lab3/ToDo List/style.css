@@ -6,13 +6,16 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .flex-container {
     display: flex;
 }
+
 ul {
     list-style-type: none;
     padding: 0;
 }
+
 a, a:hover, button, button:hover {
     cursor: pointer;
 }
@@ -21,10 +24,12 @@ a, a:hover, button, button:hover {
     padding: 0 5%;
     background-color: #737373;
 }
+
 .header-text {
     margin: 14px 0;
     font-size: 24px;
 }
+
 .completed {
     text-decoration: line-through;
     color: gray;
@@ -34,17 +39,21 @@ a, a:hover, button, button:hover {
 .content {
     margin: 0 25%;
 }
+
 .content1 {
     flex-direction: column;
 }
+
 .task-add {
     justify-content: space-evenly;
 }
+
 #task-add-input {
     padding: 8px 12px;
     width: 70%;
     border-radius: 2px;
 }
+
 #task-add-button {
     padding: 8px 12px;
     border-radius: 2px;
@@ -52,25 +61,30 @@ a, a:hover, button, button:hover {
     color: white;
     border: none;
 }
+
 #task-list {
     border: 1px solid #232323;
     border-radius: 5px;
 }
+
 .task-list-element {
     padding: 8px 12px;
     border-bottom: 1px solid #232323;
 }
+
 .task-list-element-checkbox {
     width: 100px;
     margin-right: 16px;
     align-self: center;
 }
+
 .task-list-element-text {
     min-width: 89.5%;
     overflow: auto;
     white-space: normal;
     align-self: center;
 }
+
 .task-list-delete-button {
     color: red;
     font-size: 24px;

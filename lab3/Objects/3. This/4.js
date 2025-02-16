@@ -9,7 +9,7 @@ let ladder = {
     return this;
   },
   showStep() { // shows the current step
-    console.log( this.step )
+    console.log(this.step)
     return this;
   }
 };

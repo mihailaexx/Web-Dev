@@ -6,6 +6,7 @@ let user = {
 function A() {
   return user;
 }
+
 function B() {
   return user;
 }
@@ -13,4 +14,4 @@ function B() {
 let a = new A();
 let b = new B();
 
-console.log( a == b ); // true, bc of not deep cloning of user object (covered at 2. Cloning)
+console.log(a == b); // true, bc of not deep cloning of user object (covered at 2. Cloning)
