@@ -1,0 +1,11 @@
+<div class="product-card">
+  <a [routerLink]="['/:name']">
+    <img [src]="product.photo" alt="{{ product.name }}" class="product-image" />
+  </a>
+  <hr class="divider" />
+  <a [routerLink]="['/:name']">
+    <h2 class="product-title">{{ product.name }}</h2>
+  </a>
+  <p class="product-rating">Rating: {{ product.rating }} ({{ product.ratingCount }} reviews)</p>
+  <p class="product-price">{{ product.price }}₸</p>
+</div>

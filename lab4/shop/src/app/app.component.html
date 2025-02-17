@@ -1,0 +1,26 @@
+<main>
+  <header class="header">
+    <div class="header-left">
+      <button class="header-menu">☰</button>
+      <a [routerLink]="['/']">
+        <img src="kaspi.svg" alt="logo" class="header-logo">
+      </a>
+    </div>
+    <div class="header-middle">
+      <form class="header-search">
+        <input type="text" class="header-search" placeholder="Поиск">
+      </form>
+    </div>
+    <div class="header-right">
+      <button class="header-cart">
+        <img src="cart.png">
+      </button>
+      <button class="header-profile">
+        <img src="user.png">
+      </button>
+    </div>
+  </header>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</main>

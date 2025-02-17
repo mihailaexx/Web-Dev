@@ -1,0 +1,63 @@
+.header {
+  display: flex;
+  align-items: center;
+  /*background-color: #737373;*/
+  height: 60px;
+  margin-bottom: 20px;
+  box-shadow: var(--header-border-shadow);
+}
+.header div button, .header div input {
+  margin: var(--header-margin);
+}
+.header div {
+  display: flex;
+  align-items: center;
+}
+.header button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: var(--header-border-radius);
+  box-shadow: var(--header-border-shadow);
+  transition: box-shadow 0.3s ease;
+}
+.header button:hover {
+  box-shadow: var(--header-border-shadow-focus);
+}
+.header button img {
+  width: 33px;
+  height: 33px;
+}
+
+.header-middle {
+  margin: 0 auto;
+  width: 50%;
+}
+.header-menu {
+  font-size: 16px;
+  font-weight: bold;
+}
+.header-search {
+  width: 100%;
+}
+.header-search input {
+  padding: 0 10px;
+  height: 38px;
+  border: none;
+  border-radius: var(--header-border-radius);
+  box-shadow: var(--header-border-shadow);
+}
+.header-search input:hover {
+  box-shadow: var(--header-border-shadow-focus);
+  transition: box-shadow 0.3s ease;
+}
+
+:host {
+  --header-border-shadow-focus: 0 4px 8px rgba(20, 0, 0, 0.2);
+  --header-border-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
+  --header-margin: 0 10px;
+  --header-border-radius: 8px;
+}
