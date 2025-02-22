@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 200%;
+}
+.product-category {
+  display: flex;
+  flex-direction: column;
+}
+.product-category-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-category-header button {
+  height: 40px;
+  width: 20%;
+  border: none;
+  border-radius: var(--header-border-radius);
+  box-shadow: var(--header-border-shadow);
+  transition: box-shadow 0.3s ease;
+  margin: 16px 0;
+}

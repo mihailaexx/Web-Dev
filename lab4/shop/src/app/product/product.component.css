@@ -17,6 +17,31 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.product-actions {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.product-actions button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: var(--header-border-radius);
+  box-shadow: var(--header-border-shadow);
+  transition: box-shadow 0.3s ease;
+  margin: var(--header-margin);
+}
+.product-actions button:hover {
+  box-shadow: var(--header-border-shadow-focus);
+}
+.product-actions button img {
+  width: 33px;
+  height: 33px;
+}
+
 .product-image {
   max-width: 100%;
   height: 250px;

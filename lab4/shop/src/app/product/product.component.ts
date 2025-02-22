@@ -1,14 +1,17 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Productproperties } from '../productproperties';
-import { RouterModule } from '@angular/router';
+import { Component, Input, inject } from '@angular/core';
+import { Productproperty } from '../productproperty';
+import { RouterLink } from '@angular/router';
+import { ProductshareService } from '../productshare.service';
 
 @Component({
   selector: 'app-product',
-  imports: [CommonModule, RouterModule],
+  imports: [RouterLink],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  @Input() product!: Productproperties;
+  @Input() product!: Productproperty;
+  sharingService: ProductshareService = inject(ProductshareService);
+  constructor() { }
+
 }

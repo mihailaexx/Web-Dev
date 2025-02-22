@@ -1,0 +1,11 @@
+<section>
+  <h1 class="header">Каталог</h1>
+  <div class="product-category" *ngFor="let category of categories">
+    <div class="product-category-header">
+      <button (click)="toggleProductsList(category)">{{ category }}</button>
+    </div>
+    <section class="products-grid" *ngIf="openCategories[category]">
+      <app-productsgrid [category]="category"></app-productsgrid>
+    </section>
+  </div>
+</section>

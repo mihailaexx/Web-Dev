@@ -1,0 +1,11 @@
+<div class="card-container">
+  <a href="" class="card-image">
+    <img [src]="product?.photo" alt="{{ product?.name }}" class="product-image" />
+  </a>
+  <div class="card-info">
+    <h2 class="product-label">{{ product?.name }}</h2>
+    <p class="product-rating">Rating: {{ product?.rating }} ({{ product?.ratingCount }} reviews)</p>
+    <hr class="divider" />
+    <p class="product-price">{{ product?.price }}₸</p>
+  </div>
+</div>

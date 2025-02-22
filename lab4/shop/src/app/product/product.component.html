@@ -1,11 +1,19 @@
 <div class="product-card">
-  <a [routerLink]="['/:name']">
+  <a [routerLink]="['/product', product.id]">
     <img [src]="product.photo" alt="{{ product.name }}" class="product-image" />
   </a>
   <hr class="divider" />
-  <a [routerLink]="['/:name']">
+  <a [routerLink]="['/product', product.id]">
     <h2 class="product-title">{{ product.name }}</h2>
   </a>
   <p class="product-rating">Rating: {{ product.rating }} ({{ product.ratingCount }} reviews)</p>
   <p class="product-price">{{ product.price }}₸</p>
+  <div class="product-actions">
+    <button class="product-share" (click)="sharingService.shareProduct(product.realKaspiLink)">
+      <img src="share.png" alt="share" />
+    </button>
+    <button class="product-like" (click)="">
+      <img src="heart.png" alt="like" />
+    </button>
+  </div>
 </div>
