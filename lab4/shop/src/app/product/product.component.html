@@ -12,7 +12,7 @@
     <button class="product-share" (click)="sharingService.shareProduct(product.realKaspiLink)">
       <img src="share.png" alt="share" />
     </button>
-    <button class="product-like" (click)="">
+    <button class="product-like" (click)="fetchingService.likeProduct(product.id)">
       <img src="heart.png" alt="like" />
     </button>
   </div>

@@ -15,4 +15,5 @@ export interface Productproperty {
   rating: number;
   ratingCount: number;
   realKaspiLink: string;
+  likeCount: number;
 }
