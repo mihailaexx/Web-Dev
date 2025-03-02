@@ -1,1 +1,5 @@
 <p>Photos for this album</p>
+<div *ngFor="let photo of photos">
+  <img [src]="photo.thumbnailUrl" alt="thumbnail">
+  <p>{{photo.title}}</p>
+</div>

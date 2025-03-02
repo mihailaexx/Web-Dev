@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Album } from '../album';
 import { CommonModule } from '@angular/common';
 import { AlbumfetchService } from '../albumfetch.service'
-import {RouterLink} from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-albumlist',
