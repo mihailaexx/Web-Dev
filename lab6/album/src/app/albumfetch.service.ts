@@ -23,4 +23,8 @@ export class AlbumfetchService {
   getPhotos(id: number): Observable<Photo[]> {
     return this.client.get<Photo[]>(`https://jsonplaceholder.typicode.com/albums/${id}/photos`);
   }
+
+  setAlbumTitle(id: number, title: string): Observable<Album> {
+    return this.client.patch<Album>(`https://jsonplaceholder.typicode.com/albums/${id}`, {title: title});
+  }
 }
