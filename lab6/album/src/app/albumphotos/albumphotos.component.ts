@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Photo } from '../photo';
 import { CommonModule } from '@angular/common';
 import { AlbumfetchService } from '../albumfetch.service';
-import {ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-albumphotos',
