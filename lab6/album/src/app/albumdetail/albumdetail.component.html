@@ -23,9 +23,9 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-secondary" (click)="albumfetchService.setAlbumTitle(album.id, textFromForm())">Save</button>
+    <button type="button" class="albums-button" (click)="albumfetchService.setAlbumTitle(album.id, textFromForm())">Save</button>
   </div>
 </ng-template>
-<button class="btn btn-outline-primary" (click)="open(content)">Edit </button><br>
+<button class="albums-button" (click)="open(content)">Edit </button><br>
 <!--end bootstrap-->
-<a [routerLink]="['/albums', album?.id, 'photos']">View photos</a>
+<a [routerLink]="['/albums', album?.id, 'photos']" class="albums-link">View photos</a>

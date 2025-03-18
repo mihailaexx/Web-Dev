@@ -1,4 +1,7 @@
-<h3>Albums</h3>
+<div class="flex-container">
+  <h3 class="albums">Albums</h3>
+  <button class="albums-button" (click)="open(content)">Add album</button><br>
+</div>
 <!--bootstrap-->
 <ng-template #content let-modal>
   <div class="modal-header">
@@ -21,13 +24,12 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-secondary" (click)="albumfetchService.addAlbum(textFromForm())">Save</button>
+    <button type="button" class="albums-button" (click)="albumfetchService.addAlbum(textFromForm())">Save</button>
   </div>
 </ng-template>
-<button class="btn btn-outline-primary" (click)="open(content)">Add album</button><br>
 <!--end bootstrap-->
 
-<ul *ngIf="loaded">
+<ul *ngIf="loaded" class="albums-list">
   <li *ngFor="let album of albums">
     <input class="" type="checkbox" (click)="albumfetchService.deleteAlbum(album.id)"/>
     <a [routerLink]="['/albums', album.id]">{{album.id}}</a>

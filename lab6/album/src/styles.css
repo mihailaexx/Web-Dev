@@ -11,3 +11,33 @@ body {
 button:hover, a:hover {
   cursor: pointer;
 }
+
+.albums-link {
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+.albums-link:hover {
+  color: var(--acc-color);
+  transition: 0.3s;
+  box-shadow: 0 2px var(--acc-color);
+}
+
+.albums-button {
+  background-color: white;
+  color: var(--first-color);
+  border: 1px solid var(--first-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.albums-button:hover {
+  background-color: var(--first-color);
+  color: white;
+  transition: 0.2s;
+}
+
+:root {
+  --first-color: #1e346e;
+  --acc-color: #ffb700;
+}
