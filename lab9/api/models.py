@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Company(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -23,11 +24,31 @@ class Company(models.Model):
         return self.name
 
 
+class Position(models.Model):
+    name = models.CharField(max_length=255)
+    description = models.TextField()
+
+    def to_json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+        }
+
+    def __str__(self):
+        return self.name
+
+
 class Vacancy(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     salary = models.FloatField(null=True, blank=True)
-    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    company = models.ForeignKey(
+        Company, on_delete=models.CASCADE, null=True, blank=True
+    )
+    position = models.ForeignKey(
+        Position, on_delete=models.CASCADE, null=True, blank=True
+    )
 
     class Meta:
         verbose_name = "Vacancy"
