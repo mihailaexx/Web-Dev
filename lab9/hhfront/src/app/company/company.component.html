@@ -1,0 +1,9 @@
+<div class="main">
+  <ul>
+    <li *ngFor="let company of companies">
+      <a [href]="['company/' + company.id + '/vacancies']">
+        {{company.name}} ({{company.address}})
+      </a>
+    </li>
+  </ul>
+</div>

@@ -44,10 +44,7 @@ class Vacancy(models.Model):
     description = models.TextField()
     salary = models.FloatField(null=True, blank=True)
     company = models.ForeignKey(
-        Company, on_delete=models.CASCADE, null=True, blank=True
-    )
-    position = models.ForeignKey(
-        Position, on_delete=models.CASCADE, null=True, blank=True
+        to=Company, on_delete=models.CASCADE, null=True, blank=True
     )
 
     class Meta:
@@ -60,7 +57,7 @@ class Vacancy(models.Model):
             "name": self.name,
             "description": self.description,
             "salary": self.salary,
-            "company_id": self.company_id,
+            "company_id": self.company.name,
         }
 
     def __str__(self):

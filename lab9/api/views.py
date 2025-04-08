@@ -4,32 +4,69 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from api.models import Company, Position, Vacancy
-from api.serializers import PositionSerializer, VacancySerializer
+from api.serializers import CompanySerializer, PositionSerializer, VacancySerializer
 
 
-def companies(request):
-    return JsonResponse([c.to_json() for c in Company.objects.all()], safe=False)
+class CompanyListView(APIView):
+    def get(self, request):
+        companies = Company.objects.all()
+        serializer = CompanySerializer(companies, many=True)
+        return Response(serializer.data)
+
+    def post(self, request):
+        serializer = CompanySerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-def company(request, company_id):
-    try:
-        return JsonResponse(Company.objects.get(id=company_id).to_json())
-    except Company.DoesNotExist:
-        return JsonResponse(
-            {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
-        )
+class CompanyDetailView(APIView):
+    def get(self, request, company_id):
+        try:
+            company = Company.objects.get(id=company_id)
+            serializer = CompanySerializer(company)
+            return Response(serializer.data)
+        except Company.DoesNotExist:
+            return Response(
+                {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
+            )
+
+    def put(self, request, company_id):
+        try:
+            company = Company.objects.get(id=company_id)
+            serializer = CompanySerializer(company, data=request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        except Company.DoesNotExist:
+            return Response(
+                {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
+            )
+
+    def delete(self, request, company_id):
+        try:
+            company = Company.objects.get(id=company_id)
+            company.delete()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+        except Company.DoesNotExist:
+            return Response(
+                {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
+            )
 
 
-def company_vacancy(request, company_id):
-    try:
-        return JsonResponse(
-            [v.to_json() for v in Company.objects.get(id=company_id).vacancy_set.all()],
-            safe=False,
-        )
-    except Company.DoesNotExist:
-        return JsonResponse(
-            {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
-        )
+class CompanyVacancyListView(APIView):
+    def get(self, request, company_id):
+        try:
+            company = Company.objects.get(id=company_id)
+            vacancies = Vacancy.objects.filter(company=company)
+            serializer = VacancySerializer(vacancies, many=True)
+            return Response(serializer.data)
+        except Company.DoesNotExist:
+            return Response(
+                {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
+            )
 
 
 class PositionListView(APIView):
