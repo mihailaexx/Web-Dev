@@ -14,6 +14,7 @@ export class VacancyComponent implements OnInit {
   companyId: number = 0;
   companyName: string = '';
   vacancies: Vacancy[] = []
+  isTopTen: boolean = false;
 
   constructor( private route: ActivatedRoute, private httpclient: HttpClient) {
   }
@@ -31,6 +32,14 @@ export class VacancyComponent implements OnInit {
     {
       this.vacancies = response;
     })
+    this.isTopTen = false;
+  }
+
+  getTopTenVacancies() {
+    this.httpclient.get<Vacancy>('http://127.0.0.1:8000/api/companies/' + this.companyId + '/vacancies/top-ten').subscribe((response: any) => {
+      this.vacancies = response;
+    })
+    this.isTopTen = true;
   }
 
   getCompanyName() {

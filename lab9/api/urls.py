@@ -26,5 +26,5 @@ urlpatterns = [
         VacanciesDetailView.as_view(),
         name="vacancy-detail",
     ),
-    path("vacancies/top_ten/", top_ten_vacancies, name="top-ten-vacancies"),
+    path("companies/<int:company_id>/vacancies/top-ten", CompanyVacancyTopTenListView.as_view(), name="top-ten-vacancies"),
 ]

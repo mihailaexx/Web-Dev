@@ -68,6 +68,17 @@ class CompanyVacancyListView(APIView):
                 {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
             )
 
+class CompanyVacancyTopTenListView(APIView):
+    def get(self, request, company_id):
+        try:
+            company = Company.objects.get(id=company_id)
+            vacancies = Vacancy.objects.filter(company=company).order_by("-salary")[:10]
+            serializer = VacancySerializer(vacancies, many=True)
+            return Response(serializer.data)
+        except Company.DoesNotExist:
+            return Response(
+                {"error": "Company not found"}, status=status.HTTP_404_NOT_FOUND
+            )
 
 class PositionListView(APIView):
     def get(self, request):

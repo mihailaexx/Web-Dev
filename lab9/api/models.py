@@ -57,7 +57,7 @@ class Vacancy(models.Model):
             "name": self.name,
             "description": self.description,
             "salary": self.salary,
-            "company_id": self.company.name,
+            "company_id": self.company,
         }
 
     def __str__(self):

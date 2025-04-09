@@ -1,5 +1,13 @@
 <div>
   <h1>{{companyName}} vacancies</h1>
+  <button *ngIf="isTopTen"
+          (click)="getVacancies()">
+    Show all
+  </button>
+  <button *ngIf="!isTopTen"
+          (click)="getTopTenVacancies()">
+    Show top ten only!
+  </button>
   <ul>
     <li *ngFor="let vacancy of vacancies">
       <h2>{{ vacancy.name }}</h2>
